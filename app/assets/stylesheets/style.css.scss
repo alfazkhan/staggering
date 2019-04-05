@@ -1,0 +1,101 @@
+
+.sd-project{
+  height: 20em;
+  width: 25.5em;
+  background-color: aqua;
+}
+
+.resize{
+  height: 216px;
+  width: 384px;
+}
+
+.card-img-top{
+  height: auto;
+  width: 100%;
+  image-rendering: optimizeSpeed;
+  position: center;
+}
+
+.sd-main-heading{
+  padding-bottom: 1em;
+  font-family: 'Poppins Black';
+  color: grey;
+  text-align: center;
+  font-size: 3em
+}
+
+//Slide Show
+.animate-right {
+  position: relative;
+  animation-name: animateright;
+  animation-duration: 0.5s;
+  border-radius: 3em
+}
+.sd-slideshow-image{
+  height: 45vw;
+  width: 85vw;
+  max-width: 100%;
+}
+
+@keyframes animateright {
+  from {
+
+    opacity: 0
+  }
+
+  to {
+
+    opacity: 1
+  }
+
+}
+
+
+//Slideshow End
+
+
+
+//Navbar
+
+.sd-navbar{
+  background-color: #3a5461;
+  min-height: 33px !important;
+  margin-bottom:0;
+  border-radius:0;
+}
+
+a.nav-link:link, a.nav-link:visited{
+  color:gold;
+}
+a.nav-link:hover, a.nav-link:active{
+  color:white;
+}
+
+.sd-toggler.navbar-toggler {
+  border-color: gold;
+}
+.sd-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,223,0, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+//Navbar end
+
+//Headings and Color
+.sd-heading{
+  color: gold;
+  font-size: 22px;
+}
+
+.sd-background{
+  background-color: #3a5461;
+}
+
+.sd-dark{
+  background-color: black;
+  color: grey;
+}
+
+p.sd-light-text{
+  color:white;
+}

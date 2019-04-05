@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-sm sd-navbar sticky-top">
+  <div class="mx-auto d-sm-flex d-block flex-sm-nowrap ">
+    <!-- <a class="navbar-brand" href="#">Navbar 4</a> -->
+    <button class="navbar-toggler sd-toggler navbar-toggler-right mr-auto" type="button" data-toggle="collapse" data-target="#navbarsExample11" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse text-center" id="navbarsExample11">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <%= link_to 'Home', root_path,class: 'nav-link' %><span class="sr-only">(current)</span>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'Projects', projects_path,class: 'nav-link' %>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'Pricing', pricing_path,class: 'nav-link' %>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'Contact', contact_path,class: 'nav-link' %>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'About', about_path,class: 'nav-link' %>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'Blog', blogs_path,class: 'nav-link' %>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
