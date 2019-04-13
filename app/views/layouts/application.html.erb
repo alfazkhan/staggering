@@ -16,6 +16,9 @@
   </head>
 
   <body>
+  <%if logged_in?%>
+    <h1>Admin Access</h1>
+  <%end%>
   <%= render 'layouts/navbar' %>
     <%= yield %>
   <%= render 'layouts/footer' %>

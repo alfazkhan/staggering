@@ -24,7 +24,13 @@ class BlogsController < ApplicationController
   # POST /blogs
   # POST /blogs.json
   def create
-    @blog = Blog.new(blog_params)
+    @check=Blog.new(blog_params)
+
+    if(@check.slug="")
+      @blog = Blog.new(blog_params_emp)
+    else
+      @blog = Blog.new(blog_params)
+    end
 
     respond_to do |format|
       if @blog.save
@@ -72,5 +78,9 @@ class BlogsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def blog_params
       params.require(:blog).permit(:title, :content,:slug)
+    end
+
+    def blog_params_emp
+      params.require(:blog).permit(:title, :content)
     end
 end

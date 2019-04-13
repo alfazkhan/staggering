@@ -8,9 +8,9 @@ end
 #Added Gems
 
 gem 'friendly_id'
-gem 'paperclip', '~>4.2'
+gem 'paperclip', '~>5.2.1'
 gem 'bcrypt', '~> 3.1.7'
-
+gem 'redcarpet'
 
 #End
 
