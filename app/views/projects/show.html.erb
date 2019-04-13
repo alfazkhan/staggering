@@ -1,6 +1,6 @@
 <div class="offset-md-4 col-md-4">
   <div class="card" style="border: 1.5px solid black ">
-    <%= image_tag(@project.image, class: 'card-img-top') %>
+    <%= image_tag(@project.image.url(), class: 'card-img-top') %>
     <div class="card-footer" style="background-color: #F05656">
       <div class="row">
         <div class="col-sm-6"><h4 style="color: white;font-weight: bold"><%= @project.title %></h4>

@@ -9,7 +9,7 @@ end
 
 gem 'friendly_id'
 gem 'paperclip', '~>4.2'
-
+gem 'bcrypt', '~> 3.1.7'
 
 
 #End
