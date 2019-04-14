@@ -1,29 +1,32 @@
-<div class="offset-md-4 col-md-4">
-  <div class="card" style="border: 1.5px solid black ">
-    <%= image_tag(@project.image.url(), class: 'card-img-top') %>
-    <div class="card-footer" style="background-color: #F05656">
-      <div class="row">
-        <div class="col-sm-6"><h4 style="color: white;font-weight: bold"><%= @project.title %></h4>
+
+<div class="container">
+  <h1 class="sd-main-heading">Our Projects</h1>
+
+    <div class="row">
+
+
+      <div class="col-sm-7 col-md-5 col-lg-4 mt-5"></div>
+
+
+        <div class="col-sm-6 col-md-4 col-lg-3 mt-4">
+          <div class="card">
+
+            <%= image_tag(@project.image.url(:medium), class: 'card-img-top') %>
+            <div class="card-block">
+              <h4 class="card-title"><%= @project.title %></h4>
+              <div class="meta">
+                <p><i class="fas fa-map-marker-alt"></i>  <%= @project.location %></p>
+              </div>
+              <div class="card-text">
+                <% for k in 0...@project.rating %>
+                  <i class="fas fa-star" style="color: yellow"></i>
+                <% end %>
+              </div>
+            </div>
+            <div class="card-footer">
+              <span class="float-left"><%= @project.client %> </span>
+            </div>
+          </div>
         </div>
-        <div class="col-sm-6">
-          <h4 style="color: white">&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-map-marker-alt"></i>  <%= @project.location %>
-          </h4></div>
-      </div>
-      <br><br>
-      <div class="row">
-        <div class="col-xs-6">
-          &nbsp;&nbsp;
-          <% for k in 0...@project.rating %>
-            <i class="fas fa-star" style="color: yellow"></i>
-          <% end %>
-        </div>
-        <div class="col-sm-5"></div>
-        <div class="col-sm-3">
-          <h5 style="color:white;float: right"></h5></div>
-      </div>
     </div>
-  </div>
 </div>
-<button class="btn btn-primary btn-sm"><%= link_to 'Back', projects_path, style: 'color:white' %></button>
-<button class="btn btn-info btn-sm"><%= link_to 'Edit', edit_project_path(@project), style: 'color:white' %></button>
-<button class="btn btn-danger btn-sm"><%= link_to 'Destroy', @project, style: 'color:white', method: :delete, data: {confirm: 'Are you sure?'} %></button>

@@ -5,10 +5,17 @@
     font-size: 1em;
     overflow: hidden;
     padding: 0;
-    border: none;
+    border: 1px solid grey;
     border-radius: .28571429rem;
     box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
 }
+
+.card:hover{
+  background-color: #c6c6c6;
+  box-shadow: 5px 5px 5px grey;
+}
+
+
 
 .card-block {
     font-size: 1em;

@@ -1,43 +1,46 @@
-
 <% i = 0 %>
 <div class="container">
   <h1 class="sd-main-heading">Our Projects</h1>
   <% while i < @projects.length %>
     <div class="row">
       <% count = 0 %>
-      <% while count < 3 %>
+      <% while count < 4 %>
         <% break if i + count > @projects.length - 1 %>
 
-          <div class="col-sm-6 col-md-4 col-lg-3 mt-4">
-                <div class="card">
-                    
-                    <%= image_tag(@projects[i+count].image.url(:medium),class:'card-img-top')%>
-                    <div class="card-block">
-                        <h4 class="card-title"><%= @projects[i+count].title %></h4>
-                        <div class="meta">
-                            <p><i class="fas fa-map-marker-alt"></i>  <%= @projects[i + count].location %></p>
-                        </div>
-                        <div class="card-text">
-                            <% for k in 0...@projects[i + count].rating %>
-                              <i class="fas fa-star" style="color: yellow"></i>
-                            <% end %>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <span class="float-left"><%= @projects[i+count].client %> </span>
-                    </div>
-                </div>
+
+
+        <div class="col-sm-6 col-md-4 col-lg-3 mt-4">
+          <div class="card">
+
+            <%= link_to image_tag(@projects[i + count].image.url(:medium), class: 'card-img-top'), project_path(@projects[i+count]) %>
+            <div class="card-block">
+              <h4 class="card-title"><%= @projects[i + count].title %></h4>
+              <div class="meta">
+                <p><i class="fas fa-map-marker-alt"></i>  <%= @projects[i + count].location %></p>
+              </div>
+              <div class="card-text">
+                <% for k in 0...@projects[i + count].rating %>
+                  <i class="fas fa-star" style="color: yellow"></i>
+                <% end %>
+              </div>
             </div>
-        
-         
+            <div class="card-footer">
+              <span class="float-left"><%= @projects[i + count].client %> </span>
+            </div>
+          </div>
         </div>
+
 
 
         <% count += 1 %>
       <% end %>
-    </div>
-    <br><br>
-    <% i += 3 %>
+      </div>
+
+      <% i += 4 %>
   <% end %>
 
 </div>
+
+
+
+
