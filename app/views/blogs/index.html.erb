@@ -16,10 +16,7 @@
       <tr>
         <td><%= blog.title %></td>
         <td><%= blog.content %></td>
-        <td><%= link_to 'Show', blog %></td>
-        <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
-        
-        <td><%=link_to 'Delete', delete_blog_path(blog), data:{confirm: "Are you Sure?"}%></td>
+
       </tr>
     <% end %>
   </tbody>
