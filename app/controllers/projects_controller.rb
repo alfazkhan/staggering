@@ -2,6 +2,7 @@ class ProjectsController < ApplicationController
   #skip_before_action :verify_authenticity_token, :only => [:create,:new]
   #before_action :require_user,only: [:show,:index]
   before_action :set_project, only: [:show, :edit, :update, :destroy]
+  before_action :require_user, except:[:index,:show]
 
   # GET /projects
   # GET /projects.json

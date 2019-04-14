@@ -1,5 +1,6 @@
 class ImagesController < ApplicationController
   before_action :set_image, only: [:show, :edit, :update, :destroy]
+  before_action :require_user, except:[:index,:show]
 
   # GET /images
   # GET /images.json
