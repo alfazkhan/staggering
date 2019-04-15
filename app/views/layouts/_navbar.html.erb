@@ -1,37 +1,92 @@
 <style>
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
+  .sd-header {
+    display: flex;
+    justify-content: center;
+    /* height="48px" width="68px" */
+  }
+  body {
+    font-family: 'Poppins';
   }
 
-  li {
-    float: left;
+  p{
+    font-size: 14px;
   }
 
-  li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+  .sd-heading{
+    color: gold;
+    font-size: 22px;
   }
 
-  li a:hover {
-    background-color: #111;
+  .sd-background{
+    background-color: #3a5461;
   }
+
+  .sd-dark{
+    background-color: black;
+    color: grey;
+  }
+
+  p.sd-light-text{
+    color:white;
+  }
+
+  /* Navbar Changes */
+  .sd-navbar{
+    background-color: #3a5461;
+    min-height: 33px !important;
+    margin-bottom:0;
+    border-radius:0;
+  }
+
+  a.nav-link:link, a.nav-link:visited{
+    color:gold;
+  }
+  a.nav-link:hover, a.nav-link:active{
+    color:white;
+  }
+
+  .sd-toggler.navbar-toggler {
+    border-color: gold;
+  }
+  .sd-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,223,0, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  }
+  /* Previous Customised NavLinks:
+  a.sd-navbar-link:link, a.sd-navbar-link:visited{
+      color: white;
+  }
+  a.sd-navbar-link:hover, a.sd-navbar-link:active{
+      color: gold;
+  } */
+
+  /* End Nav Bar Changes */
+
+
+
+
+  /*  */
+
 </style>
-</head>
-<body>
 
 
+<div class="sd-header sd-logo container-fluid" style="height:9em;background-color: #666666">
 
+  <%=image_tag('art-01.png',class: 'img-fluid',style: 'height: 9em;width: auto') %>
+</div>
+<!-- Navbar here -->
+<nav class="navbar navbar-expand-sm sd-navbar sticky-top">
+  <div class="mx-auto d-sm-flex d-block flex-sm-nowrap">
+    <!-- <a class="navbar-brand" href="#">Navbar 4</a> -->
+    <a class="navbar-brand align-self-center text-center mr-2 ml-2 pb-0 pt-0 position-md-absolute pb-md-0 order-1 text-uppercase" href="#" style="font-family: Century Gothic;">
 
-
-<ul>
-        <li class="nav-item active">
+      <%=image_tag('logo-01.png',style: 'height: 2em;width: auto') %>
+    </a>
+    <button class="navbar-toggler sd-toggler navbar-toggler-right " type="button" data-toggle="collapse" data-target="#navbarsExample11" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-md-center order-0" id="navbarsExample11">
+      <ul class="navbar-nav text-center">
+        <li class="nav-item">
           <%= link_to 'Home', root_path,class: 'nav-link' %><span class="sr-only">(current)</span>
         </li>
         <li class="nav-item">
@@ -46,6 +101,10 @@
         <li class="nav-item">
           <%= link_to 'About', about_path,class: 'nav-link' %>
         </li>
+      </ul>
+    </div>
+    <div class="collapse navbar-collapse justify-content-md-center order-2" id="navbarsExample11">
+      <ul class="navbar-nav text-center">
         <li class="nav-item">
           <%= link_to 'Blog', blogs_path,class: 'nav-link' %>
         </li>
@@ -65,4 +124,7 @@
           <%= link_to 'Admin', rails_admin_path,class: 'nav-link' %>
         </li>
       </ul>
-    
+    </div>
+  </div>
+</nav>
+
