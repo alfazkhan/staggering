@@ -1,14 +1,18 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @blog.title %>
-</p>
-
-<p>
-  <strong>Content:</strong>
-  <%= markdown(@blog.content)%>
-</p>
+<div class="modal-content" style="margin-top: 2em">
+  <div class="text-center" style="padding: 0.8em">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+    <h4 class="text-center" style="font-weight: bold"><%= @blog.title.upcase %></h4>
+  </div>
+  <div class="modal-body">
+    <hr>
+    <%= markdown(@blog.content) %>
+  </div>
+  <div class="modal-footer">
+    <%= link_to 'Back To Blogs', blogs_path,class: 'btn btn-danger btn-block' %>
+  </div>
+</div>
 
 <%= link_to 'Edit', edit_blog_path(@blog) %> |
 <%= link_to 'Back', blogs_path %>

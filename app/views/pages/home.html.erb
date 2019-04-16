@@ -1,3 +1,24 @@
+
+
+<%if flash[:danger] %>
+  <div class="alert alert-danger alert-dismissible fade show" role="alert">
+    <strong><%= flash[:danger] %></strong>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+<%end %>
+
+  <%if logged_in?%>
+    <div class="row">
+      <div class="col-lg-6" style="position: center">
+        <a class="btn btn-sm btn-success btn-block" style="color:#ffffff;text-align:center;font-size:3vmin;" href="/admin">Admin</a>
+      </div>
+      <div class=" col-lg-6" style="position: center">
+        <a class="btn btn-sm btn-danger btn-block " style="color:#ffffff;text-align:center;font-size:3vmin;" href="/logout">Logout</a>
+      </div>
+    </div>
+  <%end%>
+</div>
 <%=render 'pages/slideshow' %>
 
-<div style="height: 200px"></div>

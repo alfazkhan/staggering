@@ -7,11 +7,16 @@ end
 
 #Added Gems
 
-gem 'friendly_id'
+gem 'friendly_id', '~> 5.2.4'
 gem 'paperclip', '~>5.2.1'
 gem 'bcrypt', '~> 3.1.7'
 gem 'redcarpet'
 gem 'rails_admin', '~> 1.3'
+gem 'will_paginate', '~> 3.1.0'
+gem 'will_paginate-bootstrap4'
+gem 'jquery-rails'
+gem 'bootstrap', '~>4.3.1'
+gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
 
 #End
 

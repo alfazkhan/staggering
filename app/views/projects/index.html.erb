@@ -1,6 +1,12 @@
 <% i = 0 %>
 <div class="container">
   <h1 class="sd-main-heading">Our Projects</h1>
+
+  <div class="pagination justify-content-center">
+    <%= will_paginate @projects, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
+  </div>
+
+
   <% while i < @projects.length %>
     <div class="row">
       <% count = 0 %>
@@ -12,7 +18,12 @@
         <div class="col-sm-6 col-md-4 col-lg-3 mt-4">
           <div class="card">
 
-            <%= link_to image_tag(@projects[i + count].image.url(:medium), class: 'card-img-top'), project_path(@projects[i+count]) %>
+            <% if @projects[i + count].image_file_name %>
+              <%= image_tag(@projects[i + count].image.url(:medium), class: 'card-img-top') %>
+            <% else %>
+              <img class="card-img-top" src="https://picsum.photos/300/300/?image=894" alt="First slide">
+            <% end %>
+
             <div class="card-block">
               <h4 class="card-title"><%= @projects[i + count].title %></h4>
               <div class="meta">
@@ -22,6 +33,7 @@
                 <% for k in 0...@projects[i + count].rating %>
                   <i class="fas fa-star" style="color: yellow"></i>
                 <% end %>
+
               </div>
             </div>
             <div class="card-footer">
@@ -31,12 +43,11 @@
         </div>
 
 
-
         <% count += 1 %>
       <% end %>
-      </div>
+    </div>
 
-      <% i += 4 %>
+    <% i += 4 %>
   <% end %>
 
 </div>

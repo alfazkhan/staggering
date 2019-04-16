@@ -5,7 +5,7 @@ class BlogsController < ApplicationController
   # GET /blogs
   # GET /blogs.json
   def index
-    @blogs = Blog.all
+    @blogs = Blog.all.paginate(page: params[:page], per_page: 6).order("created_at DESC")
   end
 
   # GET /blogs/1
@@ -27,7 +27,7 @@ class BlogsController < ApplicationController
   def create
     @check=Blog.new(blog_params)
 
-    if(@check.slug="")
+    if @check.slug.blank?
       @blog = Blog.new(blog_params_emp)
     else
       @blog = Blog.new(blog_params)
@@ -82,6 +82,6 @@ class BlogsController < ApplicationController
     end
 
     def blog_params_emp
-      params.require(:blog).permit(:title, :content)
+      params.require(:blog).permit(:title,:content)
     end
 end

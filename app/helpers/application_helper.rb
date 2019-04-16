@@ -1,12 +1,13 @@
 require 'redcarpet'
 require 'redcarpet/render_strip'
 module ApplicationHelper
+
+
     def markdown(text)
         markdown = raw Markdown.new(text).to_html
     end
 
     def down(text)
-
         len=text.length
         string=""
         if len < 200
@@ -16,8 +17,8 @@ module ApplicationHelper
              string+=text[i]
             end
             string+="..."
-            return markdown(string)
+            markdown(string)
         end
-
     end
+
 end

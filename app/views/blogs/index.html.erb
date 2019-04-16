@@ -1,39 +1,68 @@
-
-
-
 <% i = 0 %>
-<div class="container" >
+<div class="container">
   <h1 class="sd-main-heading">Blogs</h1>
+  <div class="pagination justify-content-center">
+    <%= will_paginate @blogs, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
+  </div>
+
+
   <% while i < @blogs.length %>
     <div class="row">
       <% count = 0 %>
-      <% while count < 4 %>
+      <% while count < 3 %>
         <% break if i + count > @blogs.length - 1 %>
 
 
-
-        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" >
-
+        <!-- Blog Start -->
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
           <div class="box-part text-center" style="border: 0.5px solid black;  border-radius:10px;">
-
-
-
             <div class="title">
-              <h1 class="h1"><%= @blogs[i+count].title %></h1>
-              <span><small>Published: <%=time_ago_in_words(@blogs[i+count].created_at) %> ago</small></span>
+              <h1 class="h1"><%= @blogs[i + count].title %></h1>
+              <span><small>Published: <%= time_ago_in_words(@blogs[i + count].created_at) %> ago</small></span>
             </div>
-
             <div class="text">
-
-
-              <%= down(@blogs[i+count].content) %>
+              <%= down(@blogs[i + count].content) %>
             </div>
-
-            <%= link_to 'Continue Reading', blog_path(@blogs[i+count]), class: 'btn btn-xs btn-primary',style: 'color:white'%>
-
+            <a href="#myModal-<%= i + count %>" data-toggle="modal" data-target="#myModal-<%= i + count %>">Continue
+              Reading....</a>
           </div>
         </div>
+        <!-- Blog End -->
 
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal-<%= i + count %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="btn-block">
+                <%= link_to 'Full Page Preview', blog_path(@blogs[i + count]), class: 'btn btn-info btn-sm btn-block' %>
+
+                <%if logged_in? %>
+                  <%= link_to 'Edit Slug', edit_blog_path(@blogs[i + count]), class: 'btn btn-warning btn-sm btn-block' %>
+                <% end %>
+
+                <div class="close" data-dismiss="modal" aria-hidden="true">
+                  <i class="fas fa-window-close" style="color: red;font-size: 1.5em;"></i></div>
+              </div>
+
+              <div class="text-center">
+
+                <h4 class="text-center" style="font-weight: bold;margin-top: 1.7em"><%= @blogs[i + count].title.upcase %></h4>
+
+              </div>
+              <div class="modal-body">
+                <hr>
+                <%= markdown(@blogs[i + count].content) %>
+              </div>
+              <div class="modal-footer">
+                <%= link_to 'Full Page Preview', blog_path(@blogs[i + count]), class: 'btn btn-info btn-block' %>
+                <button type="button" class="btn btn-danger btn-block" data-dismiss="modal">Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Modal End -->
 
 
 
@@ -42,7 +71,10 @@
       <% end %>
     </div>
 
-    <% i += 4 %>
+    <% i += 3 %>
   <% end %>
 
+</div>
+<div class="pagination justify-content-center">
+  <%= will_paginate @blogs, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
 </div>

@@ -1,5 +1,18 @@
 RailsAdmin.config do |config|
 
+  config.model 'Blog' do
+    edit do
+      field :title do
+
+      end
+      field :content do
+
+      end
+      field :slug do
+        hide
+      end
+    end
+  end
 
   def current_user
     @current_user || User.find(session[:user_id]) if session[:user_id]
@@ -13,6 +26,10 @@ RailsAdmin.config do |config|
   config.authorize_with do
     redirect_to main_app.root_path unless logged_in?
   end
+
+
+
+
   ### Popular gems integration
 
   ## == Devise ==

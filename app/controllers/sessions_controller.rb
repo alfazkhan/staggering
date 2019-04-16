@@ -10,10 +10,10 @@ class SessionsController < ApplicationController
   
       if user && user.authenticate(params[:session][:password])
           session[:user_id]=user.id
-          flash[:success]="Welcome Sir...or Mam....okay I don't know just Welcome"
-          redirect_to user_path(user.id)
+
+          redirect_to rails_admin_path
       else
-      flash.now[:danger]="I am Saw-Ry Wrong Password"
+      flash.now[:danger]="Wrong Password"
       render 'new'
       end
   
@@ -21,7 +21,7 @@ class SessionsController < ApplicationController
   
     def delete
       session[:user_id]=nil
-      flash[:danger] = "Everyone Left Me Now you too, Come Back Later!"
+      flash[:danger] = "Logged Out"
       redirect_to root_path
     end
   
