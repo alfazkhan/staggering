@@ -1,44 +1,38 @@
-<%= form_with(model: blog, local: true) do |form| %>
-  <% if blog.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(blog.errors.count, "error") %> prohibited this blog from being saved:</h2>
 
-      <ul>
-      <% blog.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+
+
+<h1 class="sd-main-heading">Edit Blog Slug</h1>
+<br><br>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-3"></div>
+    <div class="col-lg-8">
+      <%= form_with(model: blog, local: true) do |b| %>
+        <div class="form-horizontal">
+
+
+          <div class="form-group">
+            <div class="col-sm-2 control-label">
+              <%= b.label :Slug %>
+            </div>
+            <div class="col-sm-10">
+              <%= b.text_field :slug, class: "form-control", placeholder: "Some title...", autofocus: true %>
+              <small class="text text-danger">=> Keep the Slug Different then already Available</small><br>
+              <small class="text text-danger">=> Don't mess with it until you know what you are doing</small>
+            </div>
+          </div>
+
+
+          <div class="form-group text-center">
+            <div class="col-sm-offset-2 col-sm-10">
+              <%= b.submit "Update", class: "btn btn-primary lo-lg" %>
+              <%= link_to 'Cancel', blogs_path, class: "btn btn-danger lo-lg"  %>
+            </div>
+          </div>
+        </div>
       <% end %>
-      </ul>
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
   </div>
+</div>
 
-  <div class="field">
-    <%= form.label :content %>
-    <%= form.text_area :content %>
-  </div>
-
-  <input type="checkbox" name="slugCheck" onchange="show()">Add Custom Slug </input>
-
-  <div class="field" style="display:none" id="slug">
-    <%= form.label :slug %>
-    <%= form.text_field :slug %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
-
-<script>
-
-var show=function()
-{
-  document.getElementById('slug').style.display="block";
-  
-}
-
-</script>
