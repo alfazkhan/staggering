@@ -1,3 +1,19 @@
+<style>
+
+  .modal-content{
+    background-color: #3A5461 !important;
+    color: white;
+  }
+
+
+    .box-part{
+      background-color: #3A5461 !important;
+      color: white;
+    }
+</style>
+
+
+
 <% i = 0 %>
 <div class="container">
   <h1 class="sd-main-heading">Blogs</h1>
@@ -29,7 +45,6 @@
         </div>
         <!-- Blog End -->
 
-
         <!-- Modal -->
         <div class="modal fade" id="myModal-<%= i + count %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
           <div class="modal-dialog">
@@ -42,7 +57,7 @@
                 <% end %>
 
                 <div class="close" data-dismiss="modal" aria-hidden="true">
-                  <i class="fas fa-window-close" style="color: red;font-size: 1.5em;"></i></div>
+                  <i class="fas fa-window-close" style="color: #F29900;font-size: 1.5em;"></i></div>
               </div>
 
               <div class="text-center">
@@ -55,7 +70,7 @@
                 <%= markdown(@blogs[i + count].content) %>
               </div>
               <div class="modal-footer">
-                <%= link_to 'Full Page Preview', blog_path(@blogs[i + count]), class: 'btn btn-info btn-block' %>
+                <%= link_to 'Full Page Preview', blog_path(@blogs[i + count]), class: 'btn btn-gold btn-block' %>
                 <button type="button" class="btn btn-danger btn-block" data-dismiss="modal">Close
                 </button>
               </div>
