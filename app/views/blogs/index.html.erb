@@ -4,7 +4,9 @@
     background-color: #3A5461 !important;
     color: white;
   }
-
+  .btn-gold{
+    background-color: #F29900 !important;
+  }
 
     .box-part{
       background-color: #3A5461 !important;
@@ -50,14 +52,15 @@
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="btn-block">
-                <%= link_to 'Full Page Preview', blog_path(@blogs[i + count]), class: 'btn btn-info btn-sm btn-block' %>
+                <%= link_to 'Full Page Preview', blog_path(@blogs[i + count]), class: 'btn btn-gold btn-sm btn-block' %>
 
                 <%if logged_in? %>
                   <%= link_to 'Edit Slug', edit_blog_path(@blogs[i + count]), class: 'btn btn-warning btn-sm btn-block' %>
                 <% end %>
 
                 <div class="close" data-dismiss="modal" aria-hidden="true">
-                  <i class="fas fa-window-close" style="color: #F29900;font-size: 1.5em;"></i></div>
+                  <span class="fas fa-window-close" style="color:red;font-size: 1.5em;"></span>
+                </div>
               </div>
 
               <div class="text-center">
