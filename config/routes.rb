@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
 
-  
-  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  get 'sitemap.xml', :to => 'pages#sitemap', :defaults => {:format => 'xml'}
 
   resources :users
   resources :blogs do

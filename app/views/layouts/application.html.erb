@@ -1,8 +1,14 @@
 <!DOCTYPE html>
 <html style="scroll-behavior: smooth;">
   <head>
-    <title>Staggering</title>
-    <%= csrf_meta_tags %>
+    <% if content_for? :for_head %>
+      <%= yield :for_head %>
+    <%else %>
+      <title>Staggering</title>
+      <%= csrf_meta_tags %>
+      <meta name="description" content="Welcome To The Staggering Designs."/>
+    <% end %>
+
     <meta name="theme-color" content="#DAA520">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
