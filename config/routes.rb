@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
 
+  resources :reviews
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   get 'sitemap.xml', :to => 'pages#sitemap', :defaults => {:format => 'xml'}
 

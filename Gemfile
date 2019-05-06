@@ -17,6 +17,7 @@ gem 'will_paginate-bootstrap4'
 gem 'jquery-rails'
 gem 'bootstrap', '~>4.3.1'
 gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
+gem 'sitemap_generator'
 
 #End
 

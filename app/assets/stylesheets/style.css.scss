@@ -1,3 +1,311 @@
+//Blogs
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400,600,700');
+
+body{
+  background: #f2f2f2;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.h1{
+  font-family: "Century Gothic";
+  font-weight: bold;
+}
+
+
+.box{
+  padding:60px 0px;
+}
+
+.box-part{
+  background:#FFF;
+  border-radius:10px;
+  padding:60px 10px;
+  margin:30px 0px;
+  height: auto;
+}
+
+.box-part:hover{
+  background-color: #c6c6c6;
+}
+
+.box-part:hover .fa ,
+.box-part:hover .title ,
+.box-part:hover .text ,
+.box-part:hover a{
+
+
+}
+
+.text{
+  margin:20px 0px;
+}
+
+.fa{
+  color:#4183D7;
+}
+
+.modal-content{
+  background-color: #3A5461 !important;
+  color: white;
+}
+.btn-gold{
+  background-color: #F29900 !important;
+}
+
+.box-part{
+  background-color: #3A5461 !important;
+  color: white;
+}
+
+//Blogs End
+
+
+//Images
+.image{
+  image-rendering: optimizeSpeed;
+}
+
+//Images End
+
+//Pages Start
+.mySlides {display:none;}
+
+.w3-animate-fading
+{animation:fading 5s infinite
+}
+@keyframes fading
+{0%{opacity:0}50%{opacity:1}100%{opacity:0}}
+
+.height
+{
+  width: 100%;
+  height: 45vw;
+}
+
+.modal-img
+{
+  margin-top: 4em;
+}
+
+//About Us
+
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,200italic,300,300italic,400italic,600,600italic,700,700italic,900,900italic);
+
+body {
+  font-family: "Century Gothic";
+  line-height: 1.5;
+  color: #323232;
+  font-size: 15px;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+}
+.heading-title {
+  margin-bottom: 100px;
+}
+.text-center {
+  text-align: center;
+}
+.heading-title h3 {
+  margin-bottom: 0;
+  letter-spacing: 2px;
+  font-weight: normal;
+}
+.p-top-30 {
+  padding-top: 30px;
+}
+.half-txt {
+  width: 60%;
+  margin: 0 auto;
+  display: inline-block;
+  line-height: 25px;
+  color: #7e7e7e;
+}
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.team-member, .team-member .team-img {
+  position: relative;
+}
+.team-member {
+  overflow: hidden;
+}
+.team-member, .team-member .team-img {
+  position: relative;
+}
+
+.team-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: 0;
+  border: 20px solid rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.90);
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.team-member:hover .team-hover .desk {
+  top: 35%;
+}
+.team-member:hover .team-hover, .team-member:hover .team-hover .desk, .team-member:hover .team-hover .s-link {
+  opacity: 1;
+}
+.team-hover .desk {
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  opacity: 0;
+  -webkit-transform: translateY(-55%);
+  -ms-transform: translateY(-55%);
+  transform: translateY(-55%);
+  -webkit-transition: all 0.3s 0.2s;
+  transition: all 0.3s 0.2s;
+  padding: 0 20px;
+}
+.desk, .desk h4, .team-hover .s-link a {
+  text-align: center;
+  color: #222;
+}
+.team-member:hover .team-hover .s-link {
+  bottom: 10%;
+}
+.team-member:hover .team-hover, .team-member:hover .team-hover .desk, .team-member:hover .team-hover .s-link {
+  opacity: 1;
+}
+.team-hover .s-link {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  opacity: 0;
+  text-align: center;
+  -webkit-transform: translateY(45%);
+  -ms-transform: translateY(45%);
+  transform: translateY(45%);
+  -webkit-transition: all 0.3s 0.2s;
+  transition: all 0.3s 0.2s;
+  font-size: 35px;
+}
+.desk, .desk h4, .team-hover .s-link a {
+  text-align: center;
+  color: #222;
+}
+.team-member .s-link a {
+  margin: 0 10px;
+  color: #333;
+  font-size: 16px;
+}
+.team-title {
+  position: static;
+  padding: 20px 0;
+  display: inline-block;
+  letter-spacing: 2px;
+  width: 100%;
+}
+.team-title h5 {
+  margin-bottom: 0px;
+  display: block;
+  text-transform: uppercase;
+}
+.team-title span {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #a5a5a5;
+  letter-spacing: 1px;
+}
+
+
+//Pages End
+
+
+//Project Start
+
+.card {
+
+
+  font-size: 1em;
+  overflow: hidden;
+  padding: 0;
+  border: 1px solid grey;
+  border-radius: .28571429rem;
+  box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
+  background-color: #3A5461 !important;
+  color: white;
+}
+
+
+.card:hover{
+  background-color: #4d6875 !important;
+  box-shadow: 5px 5px 5px grey;
+}
+
+
+
+.card-block {
+  font-size: 1em;
+  position: relative;
+  margin: 0;
+  padding: 1em;
+  border: none;
+  border-top: 1px solid rgba(34, 36, 38, .1);
+  box-shadow: none;
+}
+
+.card-img-top {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.card-title {
+  font-size: 1.28571429em;
+  font-weight: 700;
+  line-height: 1.2857em;
+}
+
+.card-text {
+  clear: both;
+  margin-top: .5em;
+  color: rgba(0, 0, 0, .68);
+}
+
+.card-footer {
+  font-size: 1em;
+  position: static;
+  top: 0;
+  left: 0;
+  max-width: 100%;
+  padding: .75em 1em;
+  color: white;
+  border-top: 1px solid rgba(0, 0, 0, .05) !important;
+
+}
+
+.review-image{
+  height:300px;
+  width:auto;
+  margin: 1.5em;
+  border-radius: 3px;
+}
+
+.review-name{
+  font-size: 2em;
+}
+//Project End
+
+
+
+
+
+
+
+
+
+//Home
 
 .sd-main-heading{
   padding-bottom: 1em;
@@ -14,9 +322,51 @@
 
 //Navbar
 
+
+
+a.nav-link:link, a.nav-link:visited{
+  color:gold;
+}
+a.nav-link:hover, a.nav-link:active{
+  color:white;
+}
+.sd-header {
+  display: flex;
+  justify-content: center;
+  /* height="48px" width="68px" */
+}
+body {
+  font-family: "Century Gothic";
+}
+
+p{
+  font-size: 14px;
+}
+
+.sd-heading{
+  color: gold;
+  font-size: 22px;
+}
+
+.sd-background{
+  background-color: #3a5461;
+}
+
+.sd-dark{
+  background-color: black;
+  color: grey;
+}
+
+p.sd-light-text{
+  color:white;
+}
+
+/* Navbar Changes */
 .sd-navbar{
-  background-color: #666666;
-  color: white;
+  background-color: #3a5461;
+  min-height: 33px !important;
+  margin-bottom:0;
+  border-radius:0;
 }
 
 a.nav-link:link, a.nav-link:visited{
@@ -26,6 +376,28 @@ a.nav-link:hover, a.nav-link:active{
   color:white;
 }
 
+.sd-toggler.navbar-toggler {
+  border-color: gold;
+}
+.sd-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,223,0, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+/* End Nav Bar Changes */
+
 
 //Navbar end
 
+
+.sd-img{
+  margin-left: 2em;
+}
+
+
+@media (max-width: 570px){
+  .sd-img{
+    margin-right: 3em;
+  }
+}
+
+//Home End

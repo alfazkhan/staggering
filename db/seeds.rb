@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 #
+
 for i in 0...12
 Blog.create([{
                  title: Faker::Artist.name,
@@ -21,3 +22,12 @@ end
                     rating:Faker::Number.between(1, 5)
                 }])
  end
+
+
+for i in 0...10
+Review.create([{
+                 name: Faker::Artist.name,
+                 review:Faker::Lorem.paragraph,
+                 rating:Faker::Number.between(1, 5)
+             }])
+end
