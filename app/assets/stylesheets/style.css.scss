@@ -389,10 +389,14 @@ a.nav-link:hover, a.nav-link:active{
 //Navbar end
 
 
-.sd-img{
-  margin-left: 2em;
-}
 
+
+@media (min-width: 571px){
+  .sd-img{
+    margin-left: 2em;
+  }
+
+}
 
 @media (max-width: 570px){
   .sd-img{

@@ -1,16 +1,13 @@
+<div class="sd-header sd-logo  container-fluid" style="height:9em;background-color: #3A5461">
 
-
-
-<div class="sd-header sd-logo  container-fluid" style="height:9em;background-color: #666666">
-
-  <%=image_tag('art-01.png',class: 'img-fluid sd-image',style: 'height: 9em;width: auto') %>
+  <%= image_tag('art-02.png', class: 'img-fluid sd-img', style: 'height: 9em;width: auto') %>
 </div>
 <!-- New Navbar -->
 <nav class="navbar navbar-expand-sm sd-navbar sticky-top" id="navbar">
   <div class="mx-auto d-sm-flex d-block flex-sm-nowrap">
 
     <a class="navbar-brand align-self-center text-center mr-2 ml-2 pb-0 pt-0 position-md-absolute pb-md-0 order-1 text-uppercase" href="<%= root_path %>" style="font-family: Century Gothic;">
-      <%= image_tag('logo-01.png',style: 'height: 2em;width: auto;margin-left: 0.5em;margin-right: 0.5em;',alt:"Logo") %>
+      <%= image_tag('logo-01.png', style: 'height: 2em;width: auto;margin-left: 0.5em;margin-right: 0.5em;', alt: "Logo") %>
     </a>
     <button class="navbar-toggler sd-toggler navbar-toggler-right " type="button" data-toggle="collapse" data-target="#navbarsExample11" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -20,10 +17,10 @@
         <li class="nav-item" style="
         margin-right: 0.5em;
         ">
-          <%= link_to('Projects' , projects_path, class: 'nav-link') %>
+          <%= link_to('Projects', projects_path, class: 'nav-link') %>
         </li>
         <li class="nav-item">
-          <%= link_to('Pricing' , pricing_path, class: 'nav-link') %>
+          <%= link_to('Pricing', pricing_path, class: 'nav-link') %>
         </li>
 
 
@@ -33,12 +30,12 @@
       <ul class="navbar-nav text-center">
 
         <li class="nav-item">
-          <%= link_to('About' , about_path, class: 'nav-link') %>
+          <%= link_to('About', about_path, class: 'nav-link') %>
         </li>
         <li class="nav-item" style="
         margin-left: 0.5em;
         ">
-          <%= link_to('Blogs' , blogs_path, class: 'nav-link') %>
+          <%= link_to('Blogs', blogs_path, class: 'nav-link') %>
         </li>
 
       </ul>
@@ -49,10 +46,10 @@
 
 <script data-turbolinks-eval="false">
 
-    $(document).on('turbolinks:load', function() {
+    $(document).on('turbolinks:load', function () {
         setTimeout(function () {
             window.location.hash = '#navbar';
-        },1000);
+        }, 1000);
     });
 
 
