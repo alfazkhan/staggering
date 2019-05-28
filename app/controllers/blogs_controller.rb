@@ -1,6 +1,6 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :delete]
-  before_action :require_user, except:[:index,:show]
+  #before_action :require_user, except:[:index,:show]
 
   # GET /blogs
   # GET /blogs.json
