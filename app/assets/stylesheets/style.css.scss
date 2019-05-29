@@ -346,6 +346,7 @@ p{
 .sd-heading{
   color: gold;
   font-size: 22px;
+  
 }
 
 .sd-background{
@@ -367,13 +368,17 @@ p.sd-light-text{
   min-height: 33px !important;
   margin-bottom:0;
   border-radius:0;
+  box-shadow: none !important;
 }
 
 a.nav-link:link, a.nav-link:visited{
   color:gold;
+  font-weight: bolder;
+  font-size: 15px;
 }
 a.nav-link:hover, a.nav-link:active{
   color:white;
+  font-weight: bolder;
 }
 
 .sd-toggler.navbar-toggler {
